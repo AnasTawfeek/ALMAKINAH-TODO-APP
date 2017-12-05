@@ -5,7 +5,7 @@ export default class Todo extends Component {
         const {todo, handleChange} = this.props;
         return (
             <div>
-                <input type="checkbox" checked={todo.done} onChange={(event) => {handleChange(todo, event.target.checked)}}/>
+                <input type="checkbox" checked={todo.done} onChange={() => {handleChange(todo.id)}}/>
                 {todo.content}
             </div>
         )
